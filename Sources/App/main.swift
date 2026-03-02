@@ -273,11 +273,11 @@ func lancerProgramme() {
             print("👋 Au revoir !")
 
         default:
-            print("❌ Votre choix est invalide !")
+            print(" Votre choix est invalide !")
         }
     }
 }
 
-//lancer le programme :
+//lancer le programme:
 
 lancerProgramme()
