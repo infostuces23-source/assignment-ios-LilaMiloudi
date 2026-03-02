@@ -220,7 +220,7 @@ func lancerProgramme() {
             print("📚 Titre du livre :")
             let titre = readLine() ?? ""
 
-            print("✍️ Auteur du livre :")
+            print(" Auteur du livre :")
             let auteur = readLine() ?? ""
 
             print("🔢 CODE ISBN :")
