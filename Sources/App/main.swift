@@ -136,7 +136,7 @@ struct Bibliotheque {
         }
 
         for livre in disponibles {
-            print("\(livre.titre) - \(livre.auteur) (ISBN: \(livre.codeISBN))")
+            print("📖 \(livre.titre) - \(livre.auteur) (ISBN: \(livre.codeISBN))")
         }
     }
 
@@ -159,7 +159,7 @@ struct Bibliotheque {
 
         for isbn in utilisateur.livresEmpruntes {
             if let livre = livres[isbn] {
-                print("- \(livre.titre)")
+                print("📚 - \(livre.titre)")
             }
         }
     }
@@ -196,15 +196,15 @@ func lancerProgramme() {
         print(
             """
 
-            ============= MON MENU =============
-            1. Ajouter un livre
-            2. Ajouter un utilisateur
-            3. Afficher les livres disponibles
-            4. Emprunter un livre
-            5. Retourner un livre
-            6. Afficher les livres emprunté par un utilisateur
-            7. Quitter le menu !
-            =====================================
+            ============= 📋 MON MENU 📋 =============
+            1. 📚 Ajouter un livre
+            2. 👤 Ajouter un utilisateur
+            3. 📖 Afficher les livres disponibles
+            4. 📤 Emprunter un livre
+            5. 📥 Retourner un livre
+            6. 👁️ Afficher les livres emprunté par un utilisateur
+            7. 🚪 Quitter le menu !
+            =========================================
             """)
     }
 
@@ -217,13 +217,13 @@ func lancerProgramme() {
         switch choix {
 
         case "1":
-            print("Titre du livre :")
+            print("📚 Titre du livre :")
             let titre = readLine() ?? ""
 
-            print("Auteur du livre :")
+            print("✍️ Auteur du livre :")
             let auteur = readLine() ?? ""
 
-            print("CODE ISBN :")
+            print("🔢 CODE ISBN :")
             let isbn = readLine() ?? ""
 
             bibliotheque.ajouterLivre(
@@ -231,10 +231,10 @@ func lancerProgramme() {
             )
 
         case "2":
-            print("Votre nom :")
+            print("👤 Votre nom :")
             let nom = readLine() ?? ""
 
-            print("Votre ID :")
+            print("🆔 Votre ID :")
             let id = readLine() ?? ""
 
             bibliotheque.ajouterUtilisateur(
@@ -245,25 +245,25 @@ func lancerProgramme() {
             bibliotheque.afficherLivres()
 
         case "4":
-            print("ISBN du livre :")
+            print("🔍 ISBN du livre :")
             let isbn = readLine() ?? ""
 
-            print("ID de l'utilisateur :")
+            print("🆔 ID de l'utilisateur :")
             let id = readLine() ?? ""
 
             bibliotheque.emprunterLivre(isbn: isbn, userId: id)
 
         case "5":
-            print("ISBN du livre :")
+            print("🔍 ISBN du livre :")
             let isbn = readLine() ?? ""
 
-            print("ID de l'utilisateur :")
+            print("🆔 ID de l'utilisateur :")
             let id = readLine() ?? ""
 
             bibliotheque.retournerLivre(isbn: isbn, userId: id)
 
         case "6":
-            print("ID de l'utilisateur :")
+            print("🆔 ID de l'utilisateur :")
             let id = readLine() ?? ""
 
             bibliotheque.afficherLivresUtilisateur(userId: id)
@@ -273,7 +273,7 @@ func lancerProgramme() {
             print("👋 Au revoir !")
 
         default:
-            print(" Votre choix est invalide !")
+            print("⚠️ Votre choix est invalide !")
         }
     }
 }
